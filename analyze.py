@@ -1,6 +1,7 @@
 """Send pre-computed metrics to DeepSeek and write the Markdown report."""
 import json
 import os
+import re
 import sys
 
 import requests
@@ -31,7 +32,7 @@ def main():
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": json.dumps(metrics, indent=2)},
             ],
-            "temperature": 0.3,
+            "temperature": 0.2,
         },
         timeout=300,
     )
@@ -42,7 +43,14 @@ def main():
     out = os.path.join("reports", f"{ticker}_earnings_report.md")
     with open(out, "w") as f:
         f.write(report)
-    print(f"wrote {out}")
+
+    signal = re.search(r"```json\s*(\{.*?\})\s*```", report, re.DOTALL)
+    if signal:
+        with open(os.path.join("reports", f"{ticker}_signal.json"), "w") as f:
+            f.write(signal.group(1))
+        print(f"wrote {out} + {ticker}_signal.json")
+    else:
+        print(f"wrote {out} (no JSON signal block found)")
 
 
 if __name__ == "__main__":

@@ -17,10 +17,11 @@ cp .env.example .env   # then add your DEEPSEEK_API_KEY
 ```bash
 TICKER=PLTR python fetch_data.py > metrics.json
 TICKER=PLTR python analyze.py < metrics.json
-# writes reports/PLTR_earnings_report.md
+# writes reports/PLTR_earnings_report.md + reports/PLTR_signal.json
 ```
 
-Any ticker works; `TICKER` defaults to `PLTR`.
+Any ticker works; `TICKER` defaults to `PLTR`. Set `PEERS` (comma-separated)
+to override the default software/AI peer set.
 
 ## GitHub Actions
 
@@ -30,8 +31,11 @@ Any ticker works; `TICKER` defaults to `PLTR`.
 
 ## Layout
 
-- `fetch_data.py` — pulls prices, computes earnings moves, HV, RSI, EMA
-  distances, volume profile, valuation multiples, EPS surprises.
+- `fetch_data.py` — pulls 5y of prices plus the options chain and computes the
+  full quant stack: earnings-day move distribution (mean/std/skew/kurtosis),
+  pre-earnings drift backtest per window, best entry window, surprise-vs-move
+  correlation, surprise momentum, HV, RSI, EMA distances, volume profile,
+  valuation, peer premium, and implied move vs HV.
 - `analyze.py` — sends metrics to DeepSeek with `prompts/system_prompt.md`,
-  writes the report.
+  writes the report and extracts the machine-readable trading signal JSON.
 - `.github/workflows/earnings_analysis.yml` — automation.

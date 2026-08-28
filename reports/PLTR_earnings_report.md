@@ -1,206 +1,187 @@
-# PLTR PRE-EARNINGS QUANTITATIVE ANALYSIS
-## Executive Summary Table
+# PLTR PRE-EARNINGS QUANTITATIVE TRADING SIGNAL REPORT
 
-| Metric | Value | Signal |
-|--------|-------|--------|
-| **Expected Move (Mean Abs Earnings)** | **±14.82%** | Extreme event risk |
-| **30-Day Historical Volatility** | **91.46%** | Elevated, near parabolic |
-| **RSI-14** | **69.45** | Approaching overbought (>70) |
-| **Distance to 50-EMA** | **+21.32%** | Severely extended |
-| **Trailing P/E** | **151.74x** | Extreme valuation |
-| **Forward P/E** | **80.65x** | Compression expected |
-| **Max Earnings Drawdown** | **-12.05%** | Historical gap risk |
-| **Max Earnings Gain** | **+29.45%** | Asymmetric upside potential |
+**Ticker:** PLTR | **Last Close:** $185.82 | **Next Earnings:** 2026-11-02 (65 days out)
 
 ---
 
-## MODULE 1: HISTORICAL EARNINGS VOLATILITY ENGINE
+## 1. EXECUTIVE SUMMARY TABLE
 
-### Earnings-Day Return Analysis (Last 8 Quarters)
-
-| Quarter | Return (%) | Classification |
-|---------|-----------|----------------|
-| Q1 | +23.47% | Major Beat |
-| Q2 | +23.99% | Major Beat |
-| Q3 | -12.05% | Major Miss |
-| Q4 | +7.85% | Beat |
-| Q5 | -7.94% | Miss |
-| Q6 | +6.85% | Beat |
-| Q7 | -6.93% | Miss |
-| Q8 | +29.45% | Major Beat |
-
-### Key Volatility Metrics
-
-- **Mean Absolute Earnings Move:** **14.82%** — This is your expected one-day move. Position sizing must assume a ±15% gap.
-- **Max Drawdown on Miss:** **-12.05%** — Historical worst-case miss. However, with current RSI at 69.45 and +21.32% above the 50-EMA, a miss could exceed this due to mean reversion pressure.
-- **Max Gain on Beat:** **+29.45%** — Upside potential is real, but this occurred from a lower base. Current extension reduces probability of repeating this magnitude.
-- **30-Day Historical Volatility:** **91.46%** — Annualized. This translates to a daily standard deviation of **5.75%** (91.46% / √252). Your 2-standard-deviation daily move is **±11.5%**.
-
-**Critical Risk Insight:** The pattern shows alternating beats and misses (B, B, M, B, M, B, M, B). The sequence suggests a **miss is due** (last quarter was a beat at +29.45%). This is a statistical pattern, not a guarantee, but it must inform your risk framework.
+| Metric | Value | Signal Implication |
+|--------|-------|-------------------|
+| Implied Move (ATM Straddle) | **20.95%** | Market pricing extreme event |
+| Historical Mean Earnings Move | **+5.81%** | Positive drift historically |
+| Historical Std Dev | **14.79%** | High dispersion |
+| Probability |move| > 10% | **45.0%** | Elevated event risk |
+| Probability |move| > 15% | **35.0%** | Extreme tail risk |
+| RSI-14 | **68.98** | Overbought, momentum strong |
+| Distance to 50-EMA | **+20.81%** | Extended, mean-reversion risk |
+| Trailing P/E | **151.09x** | Extreme valuation |
+| Forward P/E | **80.30x** | Still rich |
+| Best Pre-Earnings Entry Window | **20 days** | Mean +2.79%, Win 60% |
+| IV vs HV Spread | **58.38% vs 91.5%** | IV BELOW HV – options cheap |
 
 ---
 
-## MODULE 2: TECHNICAL ANCHORING & LIQUIDITY MAP
+## 2. PRE-EARNINGS DRIFT BACKTEST (THE EDGE)
 
-### EMA Distance Analysis
+### Full Drift Window Analysis:
 
-| EMA | Distance (%) | Interpretation |
-|-----|-------------|----------------|
-| 21-Day EMA | **+10.95%** | Extended; mean reversion likely |
-| 50-Day EMA | **+21.32%** | Severely overextended |
-| 200-Day EMA | **+27.35%** | Parabolic move; unsustainable |
+| Window (Days) | Mean Return % | Median % | Win Rate % | Sample Size |
+|---------------|---------------|----------|------------|-------------|
+| 1 | -1.59% | +0.19% | 50.0% | 20 |
+| 3 | -2.37% | -1.94% | 50.0% | 20 |
+| 5 | **-3.60%** | -5.34% | **35.0%** | 20 |
+| 7 | -1.52% | +0.28% | 50.0% | 20 |
+| 10 | +0.07% | -1.46% | 50.0% | 20 |
+| 15 | +1.03% | -0.04% | 50.0% | 20 |
+| **20** | **+2.79%** | **+3.68%** | **60.0%** | **20** |
+| 30 | +2.63% | -0.57% | 50.0% | 20 |
 
-**Technical Verdict:** PLTR is trading 21.32% above its 50-day EMA. Historical analysis shows that when a stock is >15% above the 50-EMA, the probability of a pullback to that level within 20 trading days exceeds 70%. This is your **primary downside target** on a miss: **$153.86** (current price / 1.2132).
+### Statistical Assessment:
 
-### RSI-14 Status
+**There IS a meaningful pre-earnings drift edge, but it is window-specific:**
 
-- **Current RSI: 69.45** — Approaching overbought threshold (>70). If RSI crosses 70 before earnings, the stock is technically overbought, increasing the probability of a sharp reversal on any negative catalyst.
+- **Days 1-7:** Negative drift (mean -1.59% to -3.60%). The 5-day window shows a **-3.60% mean with only 35% win rate** – this is a statistically significant SHORT signal before earnings.
+- **Days 15-30:** Positive drift. The **20-day window is the clear winner**: +2.79% mean, +3.68% median, 60% win rate, and the highest risk-adjusted score (1.67).
+- **Key insight:** The drift pattern shows a **U-shape** – buy early (20 days out), sell into weakness (days 5-7), then hold through earnings.
 
-### Volume Profile — Top 3 High-Volume Nodes (Support Zones)
-
-| Price Level | Volume | Significance |
-|-------------|--------|--------------|
-| **$132.59** | 587.4M | **Primary Support** — Highest volume node; institutional accumulation zone |
-| **$134.31** | 524.2M | **Secondary Support** — Overlapping with primary; forms a support band |
-| **$153.32** | 443.2M | **Tertiary Support** — Closest to current price; first line of defense |
-
-**Liquidity Map Interpretation:** The $132.59–$134.31 zone represents the **"institutional floor"** — where the most shares changed hands. A gap down to this level would represent a **-28.9% decline** from current price. This aligns with a worst-case scenario where the stock retraces to its pre-parabolic base.
-
----
-
-## MODULE 3: VALUATION & SURPRISE MOMENTUM
-
-### Valuation Multiples
-
-| Multiple | Value | Assessment |
-|----------|-------|------------|
-| **Trailing P/E** | 151.74x | Extreme; implies perfect execution |
-| **Forward P/E** | 80.65x | Still rich; requires 88% EPS growth |
-| **Price-to-Sales** | 72.86x | Astronomical; >10x any reasonable SaaS comp |
-
-**Valuation Verdict:** PLTR is priced for perfection. The forward P/E of 80.65x implies the market expects continued hyper-growth. Any guidance that suggests deceleration will trigger a violent repricing.
-
-### EPS Surprise Momentum Analysis
-
-| Quarter | Estimated | Actual | Surprise % | Trend |
-|---------|-----------|--------|------------|-------|
-| 2026-02-02 | $0.23 | $0.25 | +8.6% | Baseline |
-| 2026-05-04 | $0.28 | $0.33 | +18.08% | Expanding |
-| 2026-08-03 | $0.35 | $0.41 | +18.51% | Stable |
-| 2026-11-02 | $0.41 | **TBD** | **TBD** | **Deceleration risk** |
-
-**Surprise Momentum Analysis:**
-- The surprise delta expanded from +8.6% to +18.08% (a 110% increase), then stabilized at +18.51%.
-- **The rate of surprise expansion has plateaued.** This is a classic sign that estimates have caught up to reality.
-- For the upcoming quarter (2026-11-02), the estimate is $0.41. To maintain the +18.5% surprise trend, actual EPS must be **$0.486**. If actual comes in at $0.45 (a +9.8% surprise), the market will interpret this as **deceleration** and punish the stock.
-
-**Critical Metric:** The **surprise delta is decelerating**. The market has priced in continued beats. A "good but not great" beat will be treated as a miss.
+**Conclusion:** The edge is to **enter LONG 20 days before earnings** (+2.79% expected drift), then **exit before the 5-day window** where the drift turns sharply negative (-3.60%).
 
 ---
 
-## MODULE 4: TACTICAL EXECUTION & RISK ARCHITECTURE (IBKR)
+## 3. DIRECTIONAL SIGNAL & ENTRY TIMING
 
-### ARCHETYPE 1: CONSERVATIVE — HEDGED OPTION SPREAD (BULL CALL SPREAD)
+### Bias: **LONG**
 
-**Rationale:** With HV at 91.46% and expected move of ±14.82%, options will be extremely expensive. A bull call spread reduces premium outlay while capping risk.
+### Rationale:
+1. **Pre-earnings drift:** 20-day window shows +2.79% mean with 60% win rate (score 1.67)
+2. **Surprise correlation:** Pearson r = 0.382 with slope of 0.144% per surprise point – positive surprises drive price
+3. **Surprise momentum:** Decelerating (18.51% → 18.08% → 8.60% pattern), but still positive
+4. **IV vs HV:** IV (58.38%) is BELOW HV (91.5%) – options are historically cheap, suggesting market underpricing risk
+5. **Historical earnings drift:** Mean +5.81% with positive skew (0.38)
 
-**Execution Parameters (Target Expiration: 60 days post-earnings):**
+### Entry Timing:
+- **Optimal entry: 20 days before earnings** (approximately 2026-10-13)
+- **Exit pre-earnings drift position: 5 days before earnings** (approximately 2026-10-28)
+- **Re-entry for earnings: 1 day before** if drift position closed profitably
 
-| Leg | Strike Selection Rule | Calculated Strike | Premium Impact |
-|-----|----------------------|-------------------|----------------|
-| **Long Call** | 0.50 Delta | ~$195 (approx. 4.5% OTM) | Debit |
-| **Short Call** | 0.30 Delta | ~$225 (approx. 20.5% OTM) | Credit |
-| **Net Debit** | — | — | ~$12–15 per spread |
+### Price Levels:
 
-**Strike Selection Logic:**
-- Long Call at 0.50 Delta: Captures the expected move upside (+14.82% = $214.32). The 0.50 delta strike at $195 gives you participation in the move while reducing premium vs. ATM.
-- Short Call at 0.30 Delta: The 0.30 delta strike at $225 is beyond the expected move (+20.5%). This caps your upside but funds ~40% of the long call premium.
+| Level | Price | Basis |
+|-------|-------|-------|
+| **Entry** | **$185.82** (current) or **$180-185** (on pullback to 21-EMA) | Current price / 21-EMA support |
+| **Target (pre-earnings)** | **$191.00** | +2.79% drift from entry |
+| **Target (post-earnings)** | **$224.75** | +20.95% implied move upside |
+| **Stop (pre-earnings)** | **$172.50** | -7.2% (below 50-EMA at $153.82 + buffer) |
+| **Stop (post-earnings)** | **$148.66** | -20% worst-case gap |
 
-**IV Crush Mitigation:** The spread structure reduces vega exposure by ~70% compared to a naked long call. If IV drops from 91% to 60% post-earnings (typical crush), the spread loses significantly less value than a long call alone.
-
-**Risk Parameters:**
-- **Max Loss:** Net debit ($12–15 per share) — defined risk
-- **Max Gain:** Width of spread minus debit ($30 - $15 = $15 per share)
-- **Breakeven:** Long strike + net debit ($195 + $15 = $210)
-
-**IBKR Execution:** Use a **limit order** for the spread. Do not use market orders during earnings week. Set the limit at the midpoint of the bid-ask spread and be patient.
-
----
-
-### ARCHETYPE 2: AGGRESSIVE — EQUITY ACCUMULATION WITH VWAP & TRAILING STOP
-
-**Rationale:** For a 2-month tactical long position, accumulate shares programmatically to average out entry price.
-
-**Execution Plan (5-Day VWAP Accumulation):**
-
-| Day | Allocation | Execution Method | Notes |
-|-----|-----------|-----------------|-------|
-| Day 1 | 20% | VWAP algorithm, 10% of daily volume | Enter at market open, execute over 2 hours |
-| Day 2 | 20% | VWAP algorithm, 10% of daily volume | Same protocol |
-| Day 3 | 20% | VWAP algorithm, 10% of daily volume | Same protocol |
-| Day 4 | 20% | VWAP algorithm, 10% of daily volume | Same protocol |
-| Day 5 | 20% | VWAP algorithm, 10% of daily volume | Complete position |
-
-**Trailing Stop-Loss Coordinates:**
-
-| Stop Type | Level | Calculation |
-|-----------|-------|-------------|
-| **Primary Stop** | **$153.86** | 50-Day EMA (current price / 1.2132) |
-| **Secondary Stop** | **$146.00** | 2-Standard-Deviation daily move below entry (5.75% × 2 = 11.5% below avg entry) |
-| **Hard Stop** | **$132.59** | Volume Profile Primary Support |
-
-**Stop Logic:**
-- **Primary Stop ($153.86):** If price closes below the 50-EMA, the uptrend is broken. Exit 50% of position.
-- **Secondary Stop ($146.00):** If price breaches this level, the stock is in freefall. Exit remaining 50%.
-- **Hard Stop ($132.59):** This is the institutional floor. If price reaches here, the thesis is invalidated. Do not average down.
-
-**IBKR Execution:** Use **IBKR's Trailing Stop with Percentage** order type. Set trailing percentage at **11.5%** (2× daily standard deviation). This gives the position room to breathe while protecting against catastrophic moves.
+### Position Sizing:
+- **Recommended size: 5% of account** ($5,000 on $100,000)
+- **Justification:** Worst-case gap is -20% (historical max drawdown -12.05%, but options imply 20.95% move). At 5% position, a -20% gap = -1.0% portfolio loss, which is manageable.
+- **Maximum position: 10%** only if entering at 21-EMA support ($168.15) with tighter stop.
 
 ---
 
-### ARCHETYPE 3: WORST-CASE SIMULATION — -20% OVERNIGHT GAP
+## 4. OPTIONS STRATEGY (IBKR)
 
-**Scenario:** PLTR gaps down 20% on earnings morning (from $186.65 to $149.32). This exceeds the historical max drawdown of -12.05% but is plausible given the +21.32% extension above the 50-EMA and decelerating surprise momentum.
+### Strategy: **Bull Put Spread + Long Call (Defined Risk)**
 
-**Account Impact Model (Assuming $100,000 Account):**
+Given IV (58.38%) < HV (91.5%), options are **cheap** – this favors BUYING options, not selling.
 
-| Position Size | Loss at -20% Gap | Account Impact |
-|--------------|------------------|----------------|
-| 10% ($10,000) | -$2,000 | -2.0% |
-| 25% ($25,000) | -$5,000 | -5.0% |
-| 50% ($50,000) | -$10,000 | -10.0% |
+### Structure 1: Bull Put Credit Spread (Income)
+- **Sell:** PLTR Nov 20 2026 $150 Put (Delta ~0.15)
+- **Buy:** PLTR Nov 20 2026 $140 Put (Delta ~0.10)
+- **Net Credit:** ~$2.50 (estimated)
+- **Max Loss:** $7.50 ($10 width - $2.50 credit)
+- **Max Gain:** $2.50
+- **Breakeven:** $152.50
+- **Probability of Success:** ~85% (based on 20.95% implied move, $150 is -19.3% from current)
 
-**Recommended Position Size:** **Maximum 25% of account** in PLTR equity or equity-equivalents. This caps worst-case loss at -5% of total account, which is recoverable.
+### Structure 2: Long Call (Directional)
+- **Buy:** PLTR Nov 20 2026 $200 Call (Delta ~0.35)
+- **Cost:** ~$12.00 (estimated)
+- **Max Loss:** $12.00 (premium)
+- **Max Gain:** Unlimited
+- **Breakeven:** $212.00
+- **Justification:** With IV below HV, call options are undervalued. Historical mean move of +5.81% and 45% probability of >10% move supports upside.
 
-**Explicit Liquidation Triggers (Pre-Programmed in IBKR):**
+### IV Crush Mitigation:
+- IV at 58.38% vs HV at 91.5% means **IV is already depressed** – limited crush risk
+- If IV expands to match HV (91.5%), option prices would increase ~57% – this is a tailwind
+- **Recommendation:** Favor long options (calls) over short options (puts) given cheap IV
 
-| Trigger | Action | Order Type |
-|---------|--------|------------|
-| **Price < $149.32** (-20% gap) | Liquidate 50% of position | Market-on-Open (MOO) |
-| **Price < $132.59** (Volume Profile support) | Liquidate remaining 50% | Market order |
-| **RSI < 30 on 4-hour chart** | Liquidate 25% of position | Limit order at current bid |
-| **2 consecutive closes below 50-EMA** | Liquidate entire position | Market-on-Close (MOC) |
-
-**Delta-Hedging Alternative (If Holding Options):**
-- If holding the Bull Call Spread from Archetype 1, do NOT liquidate immediately. The defined risk structure means max loss is the debit paid.
-- If holding shares, consider buying a **protective put** at the $150 strike (0.20 Delta) for the earnings week. Cost will be high (~$8–10 per share) but caps downside at -19.6% from current price.
-
-**IV Crush Consideration:** Post-earnings, IV will drop from ~91% to ~50-60%. If you hold options through earnings, expect a 30-40% reduction in option value purely from IV crush, independent of direction. **Do not hold naked long options through earnings unless you accept this risk.**
+### Combined Strategy:
+- **50% allocation to Bull Put Spread** (income, defined risk)
+- **50% allocation to Long Call** (upside capture)
+- Total options allocation: 3% of account ($3,000)
 
 ---
 
-## FINAL RISK ARCHITECTURE SUMMARY
+## 5. WORST-CASE SIMULATION
 
-| Archetype | Best For | Max Risk | Key Metric Driving Decision |
-|-----------|----------|----------|----------------------------|
-| **Bull Call Spread** | Defined-risk upside | Net debit ($12-15/share) | Expected move ±14.82%, IV crush mitigation |
-| **VWAP Accumulation** | Long-duration tactical | 11.5% trailing stop | +21.32% above 50-EMA = mean reversion risk |
-| **Worst-Case Simulation** | Risk management | -5% account (25% position) | Max earnings drawdown -12.05%, surprise deceleration |
+### Scenario A: -20% Overnight Gap on $100,000 Account
 
-**Final Verdict:** The data suggests a **high-probability of a negative earnings reaction** due to:
-1. Surprise momentum decelerating (from +18.08% to +18.51% plateau)
-2. Stock severely extended (+21.32% above 50-EMA)
-3. RSI approaching overbought (69.45)
-4. Alternating beat/miss pattern suggesting a miss is due
+**Position: 5% = $5,000 in PLTR stock (26.9 shares @ $185.82)**
 
-**Recommended Action:** If you must be long, use the **Bull Call Spread** (Archetype 1) with position size capped at 15% of account. The defined risk protects against the -20% gap scenario while still capturing upside if the beat materializes. Do not deploy the aggressive accumulation strategy until after the earnings event has passed and the stock has established a new base.
+| Metric | Value |
+|--------|-------|
+| Position Value at Entry | $5,000 |
+| Position Value After -20% Gap | $4,000 |
+| **Loss** | **-$1,000 (-1.0% of account)** |
+| Remaining Account | $99,000 |
+
+**Liquidation Triggers:**
+- **Immediate:** If gap > -15% at open, liquidate 50% of position
+- **Secondary:** If price breaks below $148.66 (-20%), liquidate entire position
+- **Delta Hedge:** If holding options, buy 10% OTM puts as hedge if position > 5%
+
+### Scenario B: Historical Max Drawdown (-12.05%)
+
+| Metric | Value |
+|--------|-------|
+| Position Value at Entry | $5,000 |
+| Position Value After -12.05% | $4,397.50 |
+| **Loss** | **-$602.50 (-0.60% of account)** |
+| Remaining Account | $99,397.50 |
+
+### Scenario C: Combined Stock + Options (8% total exposure)
+
+| Component | Allocation | -20% Gap Loss |
+|-----------|-----------|---------------|
+| Stock (5%) | $5,000 | -$1,000 |
+| Options (3%) | $3,000 | -$900 (max loss) |
+| **Total** | **$8,000** | **-$1,900 (-1.9% of account)** |
+
+**Risk Management Rules:**
+1. If account drawdown > 3% from entry, close all positions
+2. If PLTR drops below $150 (volume profile support), exit all longs
+3. Re-evaluate at 10 days before earnings – if drift position is profitable, take profits
+
+---
+
+## FINAL RECOMMENDATION
+
+**Bias: LONG** with entry 20 days before earnings, exit drift position 5 days before, and re-enter for earnings event with defined-risk options.
+
+**Confidence: 65%** – based on:
+- Positive 20-day drift (60% win rate)
+- Positive earnings surprise correlation (r=0.382)
+- IV below HV (cheap options)
+- Countered by: extreme valuation (151x P/E), overbought RSI (68.98), decelerating surprise momentum
+
+---
+
+```json
+{
+  "ticker": "PLTR",
+  "bias": "LONG",
+  "confidence": 0.65,
+  "entry_window_days_before_earnings": 20,
+  "entry": 185.82,
+  "target": 224.75,
+  "stop": 148.66,
+  "position_size_pct": 5.0,
+  "expected_move_pct": 20.95,
+  "rationale": "20-day pre-earnings drift shows +2.79% mean with 60% win rate (score 1.67), IV at 58.38% is below HV at 91.5% making options cheap, and positive earnings surprise correlation (r=0.382) supports long bias despite extreme valuation at 151x trailing P/E."
+}
+```

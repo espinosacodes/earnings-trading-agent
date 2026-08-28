@@ -1,0 +1,12 @@
+{
+  "ticker": "PLTR",
+  "bias": "LONG",
+  "confidence": 0.65,
+  "entry_window_days_before_earnings": 20,
+  "entry": 185.82,
+  "target": 224.75,
+  "stop": 148.66,
+  "position_size_pct": 5.0,
+  "expected_move_pct": 20.95,
+  "rationale": "20-day pre-earnings drift shows +2.79% mean with 60% win rate (score 1.67), IV at 58.38% is below HV at 91.5% making options cheap, and positive earnings surprise correlation (r=0.382) supports long bias despite extreme valuation at 151x trailing P/E."
+}

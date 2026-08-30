@@ -53,19 +53,24 @@ def earnings_events(t: yf.Ticker, hist: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values("date").reset_index(drop=True)
 
 
-def pre_earnings_drift(closes: pd.Series, dates: pd.Series) -> dict:
-    """Mean return and win rate of buying N days before earnings, selling the
-    session before the release. This is the pre-announcement drift edge."""
+def drift_stats(closes: pd.Series, dates: pd.Series, windows=DRIFT_WINDOWS, sell_on_earnings_day=False) -> dict:
+    """Per-window mean/win-rate of a long entered N days before earnings.
+
+    sell_on_earnings_day=False sells the session before the release (pure
+    pre-announcement drift). True sells on the earnings-day close (drift held
+    through the release).
+    """
     closes = _naive(closes.copy())
     dates = pd.to_datetime(dates)
-    out = {w: [] for w in DRIFT_WINDOWS}
+    out = {w: [] for w in windows}
     for d in dates:
         d = d.tz_convert(None) if d.tzinfo is not None else d
         pos = closes.index.searchsorted(d)
-        for w in DRIFT_WINDOWS:
-            if pos - 1 - w < 0 or pos - 1 >= len(closes):
+        for w in windows:
+            if pos - 1 - w < 0 or pos >= len(closes):
                 continue
-            entry, exit_ = closes.iloc[pos - 1 - w], closes.iloc[pos - 1]
+            entry = closes.iloc[pos - 1 - w]
+            exit_ = closes.iloc[pos] if sell_on_earnings_day else closes.iloc[pos - 1]
             if entry > 0:
                 out[w].append((exit_ - entry) / entry * 100)
     return {
@@ -77,6 +82,34 @@ def pre_earnings_drift(closes: pd.Series, dates: pd.Series) -> dict:
         }
         for w, v in out.items()
         if v
+    }
+
+
+def atr(hist: pd.DataFrame, period: int = 14) -> float:
+    h, l, c = hist["High"], hist["Low"], hist["Close"]
+    pc = c.shift(1)
+    tr = pd.concat([h - l, (h - pc).abs(), (l - pc).abs()], axis=1).max(axis=1)
+    return float(tr.tail(period).mean())
+
+
+def long_term_stats(close: pd.Series) -> dict:
+    c = close.dropna()
+    if len(c) < 252:
+        return {}
+    years = len(c) / 252
+    total_ret = c.iloc[-1] / c.iloc[0] - 1
+    cagr = (c.iloc[-1] / c.iloc[0]) ** (1 / years) - 1
+    logret = np.log(c / c.shift(1)).dropna()
+    vol = float(logret.std() * np.sqrt(252))
+    sharpe = float(logret.mean() / logret.std() * np.sqrt(252))
+    dd = float((c / c.cummax() - 1).min())
+    return {
+        "years": round(years, 2),
+        "cagr_pct": round(float(cagr * 100), 2),
+        "total_return_pct": round(float(total_ret * 100), 2),
+        "annualized_vol_pct": round(vol * 100, 2),
+        "sharpe": round(sharpe, 2),
+        "max_drawdown_pct": round(dd * 100, 2),
     }
 
 
@@ -220,8 +253,9 @@ def fetch(ticker: str, peers: list[str]) -> dict:
     moves = events["return"]
     moves8 = moves.tail(8)
 
-    drift = pre_earnings_drift(close, events["date"])
+    drift = drift_stats(close, events["date"])
     drift_best = drift_signal(drift)
+    hold_through = drift_stats(close, events["date"], sell_on_earnings_day=True)
 
     next_earnings = None
     try:
@@ -261,7 +295,11 @@ def fetch(ticker: str, peers: list[str]) -> dict:
         "max_earnings_gain_pct": round(float(moves8.max()), 2) if len(moves8) else None,
         "hv_30d_pct": round(hv30, 2),
         "pre_earnings_drift": drift,
+        "hold_through_earnings": hold_through,
         "best_entry_window": drift_best,
+        "atr_14": round(atr(hist), 2),
+        "long_term": long_term_stats(close),
+        "quote_type": info.get("quoteType"),
         "surprise_vs_move_corr": surprise_vs_move(events),
         "surprise_momentum": surprise_momentum(events),
         "rsi_14": round(rsi(close), 2),

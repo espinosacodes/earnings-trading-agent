@@ -1,12 +1,15 @@
 {
   "ticker": "GE",
+  "asset_type": "stock",
   "bias": "LONG",
-  "confidence": 0.72,
+  "confidence": 0.75,
   "entry_window_days_before_earnings": 30,
   "entry": 342.58,
-  "target": 361.25,
-  "stop": 320.13,
-  "position_size_pct": 15.0,
+  "target": 361.42,
+  "stop": 324.6,
+  "position_size_pct": 5.0,
   "expected_move_pct": 5.45,
-  "rationale": "30-day pre-earnings drift shows +5.45% mean return with 75% win rate (score 4.09), while RSI at 41.72 and -2.72% distance to 50-EMA provide technical tailwinds for long entry."
+  "hold_through_earnings": false,
+  "holding_period_days": 30,
+  "rationale": "30-day pre-earnings drift shows +5.45% mean return with 75% win rate, while earnings-day distribution is negative (-1.03% mean) and surprise momentum is decelerating, favoring exit before release."
 }

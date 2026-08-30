@@ -1,12 +1,15 @@
 {
   "ticker": "TKR",
+  "asset_type": "stock",
   "bias": "LONG",
-  "confidence": 0.72,
+  "confidence": 0.65,
   "entry_window_days_before_earnings": 30,
-  "entry": 115.0,
-  "target": 124.5,
-  "stop": 106.5,
-  "position_size_pct": 15.0,
+  "entry": 120.82,
+  "target": 124.46,
+  "stop": 113.74,
+  "position_size_pct": 5.0,
   "expected_move_pct": 3.01,
-  "rationale": "30-day pre-earnings drift shows +3.01% mean return with 60% win rate (t-stat 2.41) while RSI at 36.38 and -7.12% below 50-EMA provide oversold entry; options imply 17.38% move vs 0% historical probability of >10% move, making premium selling attractive."
+  "hold_through_earnings": true,
+  "holding_period_days": 30,
+  "rationale": "30-day pre-earnings drift mean 3.01% with 60% win rate, hold-through adds 0.41% (3.42% vs 3.01%), and expanding EPS surprise momentum supports long bias."
 }

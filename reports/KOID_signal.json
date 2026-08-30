@@ -1,0 +1,15 @@
+{
+  "ticker": "KOID",
+  "asset_type": "etf",
+  "bias": "LONG",
+  "confidence": 0.72,
+  "entry_window_days_before_earnings": 0,
+  "entry": 36.24,
+  "target": 40.66,
+  "stop": 34.86,
+  "position_size_pct": 12.0,
+  "expected_move_pct": 0.0,
+  "hold_through_earnings": false,
+  "holding_period_days": 365,
+  "rationale": "LONG bias supported by 34.84% CAGR, Sharpe 1.09, and -70.6% P/E discount to peers, with entry at current price and target at volume node 40.66."
+}

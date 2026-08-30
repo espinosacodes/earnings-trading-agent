@@ -1,166 +1,162 @@
-# GE PRE-EARNINGS QUANTITATIVE TRADING SIGNAL REPORT
+# GE EARNINGS TRADE ANALYSIS — QUANTITATIVE SIGNAL ENGINE
+
+---
 
 ## 1. EXECUTIVE SUMMARY TABLE
 
 | Metric | Value | Signal Implication |
 |--------|-------|-------------------|
-| **Implied Move (Options)** | 12.7% (Straddle $43.50) | EXTREMELY HIGH vs historical |
-| **Historical Mean Earnings Move** | -1.03% (std 2.36%) | Options pricing 5.4x historical |
-| **Historical Max Move** | -5.64% to +3.37% | Implied move exceeds historical max |
-| **RSI-14** | 41.72 | Neutral-bearish, room to run up |
-| **Distance to 50-EMA** | -2.72% | Below 50-EMA, mean-reversion potential |
-| **Distance to 200-EMA** | +6.88% | Long-term uptrend intact |
-| **Trailing P/E** | 40.45 | Premium but below peers |
-| **Best Pre-Earnings Window** | 30 days (mean +5.45%, 75% win rate) | STRONG LONG DRIFT EDGE |
-| **Surprise Momentum** | Decelerating (8.62% last vs 16.31% prior) | Negative signal for post-earnings |
+| **Implied Move (Options)** | ±12.7% | Market pricing extreme event risk |
+| **Historical Mean Move** | -1.03% | Negative drift on earnings day |
+| **Historical Std Dev** | ±2.36% | Actual moves historically small |
+| **IV vs HV Gap** | 37.22% vs 32.36% | IV premium = 15% over realized |
+| **RSI-14** | 41.72 | Below neutral, room to run up |
+| **Distance to 50-EMA** | -2.72% | Slightly below trend support |
+| **Distance to 200-EMA** | +6.88% | Above long-term trend |
+| **Trailing P/E** | 40.30 | Premium valuation |
+| **Best Pre-Earnings Window** | 30 days | +5.45% mean, 75% win rate |
+| **Recommended Hold** | Exit BEFORE earnings | See Section 3 |
 
 ---
 
 ## 2. PRE-EARNINGS DRIFT BACKTEST (THE EDGE)
 
-### Complete Drift Window Analysis:
+| Window (Days) | Mean Return % | Median % | Win Rate % | Sample Size |
+|---------------|---------------|----------|------------|-------------|
+| 1 | +0.04 | +0.34 | 50.0 | 20 |
+| 3 | +0.82 | +2.98 | 60.0 | 20 |
+| 5 | -0.04 | +1.95 | 65.0 | 20 |
+| 7 | +1.69 | +3.51 | 70.0 | 20 |
+| 10 | +3.18 | +4.71 | 70.0 | 20 |
+| 15 | +4.27 | +3.36 | 70.0 | 20 |
+| 20 | +4.26 | +2.88 | 65.0 | 20 |
+| **30** | **+5.45** | **+6.18** | **75.0** | **20** |
 
-| Window (Days) | Mean Return % | Median % | Win Rate % | Sample Size | Risk-Adjusted Score |
-|---------------|--------------|----------|------------|-------------|-------------------|
-| 1 | +0.04% | +0.34% | 50.0% | 20 | 0.02 |
-| 3 | +0.82% | +2.98% | 60.0% | 20 | 0.49 |
-| 5 | -0.04% | +1.95% | 65.0% | 20 | -0.03 |
-| 7 | +1.69% | +3.51% | 70.0% | 20 | 1.18 |
-| 10 | +3.18% | +4.71% | 70.0% | 20 | 2.23 |
-| 15 | +4.27% | +3.36% | 70.0% | 20 | 2.99 |
-| 20 | +4.26% | +2.88% | 65.0% | 20 | 2.77 |
-| **30** | **+5.45%** | **+6.18%** | **75.0%** | **20** | **4.09** |
+### VERDICT: STATISTICALLY MEANINGFUL POSITIVE DRIFT
 
-### Statistical Verdict:
-**STRONG POSITIVE PRE-EARNINGS DRIFT CONFIRMED.** The 30-day window shows:
-- Mean return of **+5.45%** with a **75% win rate** (15 of 20 occurrences profitable)
-- Median return of **+6.18%** exceeds mean, indicating upside skew
-- Score of **4.09** is the highest across all windows, representing exceptional risk-adjusted drift
-- The drift is monotonic from 7-day (+1.69%) to 30-day (+5.45%), suggesting a persistent accumulation pattern
-
-**Critical Insight:** The drift edge is in PROFIT BEFORE the earnings release. The 30-day window captures institutional accumulation ahead of the event.
+The 30-day window shows **+5.45% mean return** with a **75% win rate** across 20 observations. The median (+6.18%) exceeds the mean, indicating a favorable distribution. The 10-day window also shows strong edge (+3.18%, 70% win rate). This is a **robust, repeatable pre-earnings drift pattern** — GE consistently appreciates into earnings releases.
 
 ---
 
-## 3. DIRECTIONAL SIGNAL & ENTRY TIMING
+## 3. HOLD THROUGH EARNINGS OR EXIT BEFORE
 
-### Signal Synthesis:
+### Comparison at Best Window (30 days):
 
-| Factor | Reading | Weight | Direction |
-|--------|---------|--------|-----------|
-| Pre-Earnings Drift (30d) | +5.45%, 75% WR | 35% | STRONG LONG |
-| RSI (41.72) | Below 50, room to run | 15% | LONG |
-| Distance to 50-EMA (-2.72%) | Oversold vs trend | 15% | LONG |
-| Surprise Momentum | Decelerating | 20% | SHORT |
-| IV vs HV (37% vs 32.36%) | IV premium 14.3% | 15% | NEUTRAL |
+| Metric | Exit Before (Pre-Drift) | Hold Through |
+|--------|------------------------|--------------|
+| Mean Return | **+5.45%** | +4.38% |
+| Median Return | **+6.18%** | +6.30% |
+| Win Rate | **75.0%** | 80.0% |
+| Edge Difference | **+1.07%** | — |
 
-**Net Bias: LONG (Moderate-High Confidence)**
+### Verdict: **EXIT BEFORE EARNINGS**
 
-### Entry Timing:
-- **Optimal Entry: 30 days before earnings** (score 4.09, 75% win rate)
-- **Current Position:** 52 days to earnings → **ENTER NOW** to capture the full 30-day drift window
-- **Alternative:** If waiting, enter no later than 30 days pre-earnings (September 20, 2026)
-
-### Price Levels:
-
-| Level | Price | Derivation |
-|-------|-------|------------|
-| **Entry** | $342.58 | Current close (within 2.72% of 50-EMA support) |
-| **Target (Pre-Earnings)** | $361.25 | Entry × (1 + 5.45% drift mean) |
-| **Target (Post-Earnings)** | $355.00 | Conservative: entry + 2.02% mean abs move |
-| **Stop** | $320.13 | Volume Profile Node 2 (major support) |
-| **Worst-Case Stop** | $293.04 | Volume Profile Node 1 (max drawdown protection) |
-
-### Position Sizing:
-- **Recommended Size: 15% of account** ($15,000 on $100,000)
-- **Justification:** Historical max drawdown is -3.64% (earnings day), but pre-earnings drift has 25% failure rate. Stop at $320.13 represents -6.55% risk on position = -0.98% portfolio risk. This is within acceptable 1% portfolio risk threshold.
+**Reasoning:**
+1. **Risk-adjusted edge favors exit**: The pre-drift captures +5.45% mean with 75% win rate. Holding through adds only +4.38% (net -1.07% worse) while exposing to earnings-day gap risk.
+2. **Earnings-day distribution is negative**: Mean earnings-day move is **-1.03%** with max drawdown of **-3.64%**.
+3. **Surprise momentum is decelerating**: EPS surprise trend declining from +26.9% (Jan 2025) to +8.62% (Jul 2026) — negative catalyst risk.
+4. **Negative surprise-price correlation**: Pearson r = **-0.321** — larger surprises correlate with LOWER prices.
 
 ---
 
-## 4. OPTIONS STRATEGY (IBKR)
+## 4. DIRECTIONAL SIGNAL, ENTRY TIMING & HOLDING PERIOD
 
-### Strategy: Bull Put Spread (Defined Risk, IV Harvest)
+### Bias: **LONG** (pre-earnings drift capture)
 
-**Rationale:** With IV at 37% vs HV at 32.36%, there's a 14.3% IV premium to harvest. The 12.7% implied move is 5.4x the historical mean, creating overpriced puts.
+### Optimal Entry Window: **30 days before earnings** (score 4.09)
 
-### Structure: Bull Put Spread
+### Entry Logic:
+- 30-day window shows strongest drift (+5.45%, 75% win rate)
+- RSI at 41.72 (not overbought) — room for upside
+- Price 2.72% below 50-EMA — potential mean reversion entry
+- Volume profile shows support at $320.13 (major node)
 
-| Component | Strike | Delta | Premium |
-|-----------|--------|-------|---------|
-| **Sell Put** | $310 (10% OTM) | ~0.15 | $4.20 |
-| **Buy Put** | $290 (15% OTM) | ~0.08 | $1.80 |
-| **Net Credit** | | | **$2.40** |
+### Trade Parameters:
 
-### Risk/Reward:
+| Parameter | Value | Derivation |
+|-----------|-------|------------|
+| **Entry** | $342.58 (current) | Last close |
+| **Target** | $361.42 | Entry + 5.45% (30-day drift mean) |
+| **Stop-Loss** | $324.60 | Entry - 2× ATR (2 × $8.99) |
+| **Holding Period** | 30 days | Exit before earnings |
+| **Position Size** | 5% of account | See risk calc below |
+
+### Position Sizing Justification:
+- Worst-case historical earnings gap: -5.64% (min in distribution)
+- With 2× ATR stop ($18 loss/share), max loss = 5.25% of position
+- At 5% allocation: max portfolio loss = 0.26% — acceptable
+- 75% win rate × +5.45% avg win vs 25% × -5.25% avg loss = **+2.78% expected edge**
+
+---
+
+## 5. OPTIONS STRATEGY (IBKR)
+
+### Structure: **Bull Call Spread** (defined risk)
+
+| Leg | Strike | Delta Target | Premium |
+|-----|--------|--------------|---------|
+| Buy Call | $340 (ATM) | ~0.50 | $21.75 (half straddle) |
+| Sell Call | $385 (OTM) | ~0.20 | ~$8.00 |
+| **Net Debit** | | | **~$13.75** |
+
+### Trade Economics:
 
 | Metric | Value |
 |--------|-------|
-| **Max Loss** | $20.00 - $2.40 = $17.60 per share ($1,760 per contract) |
-| **Max Gain** | $2.40 per share ($240 per contract) |
-| **Breakeven** | $310 - $2.40 = $307.60 |
-| **Return on Risk** | 13.6% over 30 days |
-| **Probability of Profit** | ~85% (delta of short put = 0.15) |
+| Max Loss | $13.75/share ($1,375 per contract) |
+| Max Gain | $31.25/share ($3,125 per contract) |
+| Breakeven | $353.75 (entry + net debit) |
+| Max Return | 227% on risk |
 
 ### IV Crush Mitigation:
-- The 14.3% IV premium (37% vs 32.36% HV) will compress post-earnings
-- Selling options captures this premium decay
-- Position opened 30 days pre-earnings to maximize theta decay
+- IV/HV gap = 37.22% vs 32.36% = **15% premium**
+- Enter 30 days before earnings, exit 2 days before
+- Avoids post-earnings IV collapse entirely
+- Time decay works FOR us (selling $385 call)
 
 ---
 
-## 5. WORST-CASE SIMULATION
+## 6. WORST-CASE SIMULATION
 
-### Scenario A: -20% Overnight Gap ($100,000 Account)
+### Scenario A: -20% Overnight Gap
 
-| Parameter | Value |
-|-----------|-------|
-| **Position Size** | 15% = $15,000 |
-| **Shares at Entry** | $15,000 / $342.58 = 43.8 shares (round to 44) |
-| **Gap Impact** | 44 × $342.58 × (-20%) = **-$3,014.70** |
-| **Portfolio Impact** | -3.01% |
-| **Remaining Equity** | $96,985.30 |
+| Account Size | $100,000 |
+|--------------|----------|
+| Position Size | 5% ($5,000) |
+| Shares | 14 shares @ $342.58 |
+| Gap Loss | $959 (14 × $68.52) |
+| **Portfolio Impact** | **-0.96%** |
 
-### Scenario B: Historical Max Drawdown (-3.64%)
+### Scenario B: Historical Max Drawdown (-44.94%)
 
-| Parameter | Value |
-|-----------|-------|
-| **Position Impact** | 44 × $342.58 × (-3.64%) = **-$548.68** |
-| **Portfolio Impact** | -0.55% |
-| **Remaining Equity** | $99,451.32 |
+| Position Value | $5,000 |
+|----------------|--------|
+| Drawdown Loss | $2,247 |
+| **Portfolio Impact** | **-2.25%** |
 
-### Risk Management Triggers:
-
-| Trigger | Action | Level |
-|---------|--------|-------|
-| **Liquidation** | Close 50% position | Price < $320.13 (Volume Node 2) |
-| **Full Liquidation** | Close 100% position | Price < $310.00 (Options short strike) |
-| **Delta Hedge** | Buy 25% hedge via puts | IV > 45% or price < $325 |
-| **Time Stop** | Exit position | 5 days before earnings if drift < +2% |
+### Liquidation Triggers:
+1. **Hard Stop**: Exit at $324.60 (2× ATR) — automatic
+2. **Time Stop**: Exit 2 days before earnings (Oct 18, 2026)
+3. **Delta Hedge Trigger**: If RSI > 70 or price > $370 (target + 2.4%), sell 50% position
 
 ---
 
-## FINAL RECOMMENDATION
-
-**Bias: LONG** with entry immediately to capture the 30-day pre-earnings drift. The combination of:
-- 75% win rate drift (+5.45% mean)
-- Oversold technicals (RSI 41.72, below 50-EMA)
-- Overpriced options (IV 14.3% above HV) for premium harvesting
-
-The primary risk is the decelerating surprise momentum, but the pre-earnings drift edge (75% win rate) provides a statistical buffer. Position sizing at 15% with strict stops at volume profile nodes limits worst-case loss to -3.01% on a -20% gap scenario.
-
----
+## MACHINE-READABLE OUTPUT
 
 ```json
 {
   "ticker": "GE",
+  "asset_type": "stock",
   "bias": "LONG",
-  "confidence": 0.72,
+  "confidence": 0.75,
   "entry_window_days_before_earnings": 30,
   "entry": 342.58,
-  "target": 361.25,
-  "stop": 320.13,
-  "position_size_pct": 15.0,
+  "target": 361.42,
+  "stop": 324.6,
+  "position_size_pct": 5.0,
   "expected_move_pct": 5.45,
-  "rationale": "30-day pre-earnings drift shows +5.45% mean return with 75% win rate (score 4.09), while RSI at 41.72 and -2.72% distance to 50-EMA provide technical tailwinds for long entry."
+  "hold_through_earnings": false,
+  "holding_period_days": 30,
+  "rationale": "30-day pre-earnings drift shows +5.45% mean return with 75% win rate, while earnings-day distribution is negative (-1.03% mean) and surprise momentum is decelerating, favoring exit before release."
 }
 ```

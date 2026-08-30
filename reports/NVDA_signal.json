@@ -1,12 +1,15 @@
 {
   "ticker": "NVDA",
+  "asset_type": "stock",
   "bias": "LONG",
   "confidence": 0.75,
   "entry_window_days_before_earnings": 20,
   "entry": 217.55,
-  "target": 239.0,
-  "stop": 199.0,
+  "target": 246.14,
+  "stop": 203.79,
   "position_size_pct": 5.0,
   "expected_move_pct": 14.18,
-  "rationale": "20-day pre-earnings drift shows 90% win rate with +9.83% mean return, and expanding EPS surprise momentum supports long bias."
+  "hold_through_earnings": true,
+  "holding_period_days": 30,
+  "rationale": "20-day pre-earnings drift shows 9.83% mean return with 90% win rate, and holding through earnings adds 3.31% to the 20-day window (13.14% vs 9.83%), supported by expanding EPS surprise momentum and RSI at 52.34 indicating neutral technical positioning."
 }

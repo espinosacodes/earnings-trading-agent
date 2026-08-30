@@ -1,12 +1,15 @@
 {
   "ticker": "AVGO",
-  "bias": "NEUTRAL",
+  "asset_type": "stock",
+  "bias": "LONG",
   "confidence": 0.65,
-  "entry_window_days_before_earnings": 1,
-  "entry": 365.77,
-  "target": 395.45,
-  "stop": 348.00,
-  "position_size_pct": 2.0,
+  "entry_window_days_before_earnings": 2,
+  "entry": 368.79,
+  "target": 398.74,
+  "stop": 342.47,
+  "position_size_pct": 5.0,
   "expected_move_pct": 8.12,
-  "rationale": "Optimal 30-day pre-earnings drift window (+7.27%, 78.9% WR) missed; residual 3-day edge (+0.99%, 60% WR) insufficient vs 8.12% implied move, with negative surprise-move correlation (-0.144) and decelerating momentum favoring flat positioning."
+  "hold_through_earnings": true,
+  "holding_period_days": 5,
+  "rationale": "30-day pre-earnings drift mean of 7.27% with 78.9% win rate and hold-through mean of 9.18% exceeds exit-before, while implied move of 8.12% is below historical mean absolute move of 10.83%, supporting a long bias with a 5% position."
 }

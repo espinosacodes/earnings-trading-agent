@@ -42,9 +42,10 @@ See `PORTFOLIO.md` for the long-term value + growth framework.
 
 - `fetch_data.py` — pulls 5y of prices plus the options chain and computes the
   full quant stack: earnings-day move distribution (mean/std/skew/kurtosis),
-  pre-earnings drift backtest per window, best entry window, surprise-vs-move
-  correlation, surprise momentum, HV, RSI, EMA distances, volume profile,
-  valuation, peer premium, and implied move vs HV.
+  pre-earnings drift backtest per window, hold-through-earnings comparison,
+  best entry window, ATR-14, 5y long-term stats (CAGR/vol/Sharpe/max DD),
+  surprise-vs-move correlation, surprise momentum, HV, RSI, EMA distances,
+  volume profile, valuation, peer premium, and implied move vs HV.
 - `analyze.py` — sends metrics to DeepSeek with `prompts/system_prompt.md`,
   writes the report and extracts the machine-readable trading signal JSON.
 - `.github/workflows/earnings_analysis.yml` — automation.

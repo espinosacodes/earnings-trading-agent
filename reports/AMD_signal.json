@@ -1,12 +1,15 @@
 {
   "ticker": "AMD",
+  "asset_type": "stock",
   "bias": "LONG",
   "confidence": 0.65,
   "entry_window_days_before_earnings": 20,
-  "entry": 448.73,
-  "target": 479.10,
-  "stop": 430.78,
-  "position_size_pct": 5.0,
+  "entry": 465.58,
+  "target": 497.2,
+  "stop": 427.3,
+  "position_size_pct": 15.0,
   "expected_move_pct": 6.79,
-  "rationale": "20-day pre-earnings drift shows +6.79% mean return with 60% win rate and positive median (+2.80%), while IV (57.14%) trades below HV (72.42%) making options underpriced for the expected move."
+  "hold_through_earnings": false,
+  "holding_period_days": 20,
+  "rationale": "Positive pre-earnings drift of +6.79% (60% win rate) over 20-day window with median collapse to -6.09% if held through earnings, justifying LONG entry with exit before release."
 }

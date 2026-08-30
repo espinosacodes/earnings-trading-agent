@@ -1,186 +1,158 @@
-# AMD PRE-EARNINGS QUANTITATIVE TRADING SIGNAL REPORT
+# AMD (NASDAQ: AMD) — Pre-Earnings Quantitative Trade Analysis
 
-**Ticker:** AMD | **Last Close:** $465.58 | **Earnings Date:** 2026-11-03 | **Days to Earnings:** 66
+**Analysis Date:** 2026-08-31 | **Next Earnings:** 2026-11-03 (64 days out)
 
 ---
 
 ## 1. EXECUTIVE SUMMARY TABLE
 
-| Metric | Value | Signal Implication |
-|--------|-------|-------------------|
-| Implied Move (ATM Straddle) | **21.1%** | Extremely elevated vs 8.82% historical mean |
-| Historical Mean Earnings Move | **-0.75%** | Slight negative drift post-earnings |
-| Historical Std Dev | **8.87%** | High volatility regime |
-| RSI-14 | **44.83** | Neutral-bearish momentum |
-| Distance to 50-EMA | **-3.62%** | Below key support |
-| Distance to 200-EMA | **+26.06%** | Long-term uptrend intact |
-| Trailing P/E | **119.07x** | Rich valuation |
-| Forward P/E | **30.13x** | Growth expected to normalize |
-| Best Pre-Earnings Entry Window | **20 days** | Score: 4.07, Mean: +6.79% |
-| IV vs HV Spread | **57.14% vs 72.42%** | IV BELOW HV — options underpriced |
+| Metric | Value | Signal |
+|--------|-------|--------|
+| **Implied Move (Options)** | ±21.1% | Extremely elevated |
+| **Historical Mean Abs Move** | 8.82% | Options overpricing risk |
+| **IV vs HV Gap** | ATM IV 57.5% vs HV 72.4% | IV below realized vol |
+| **RSI-14** | 44.83 | Neutral-bearish momentum |
+| **Distance to 50-EMA** | -3.62% | Below short-term trend |
+| **Distance to 200-EMA** | +26.06% | Above long-term trend |
+| **Trailing P/E** | 121.88x | Rich valuation |
+| **Best Pre-Earnings Window** | 20 days (mean +6.79%, 60% WR) | Positive drift edge |
+| **Recommended Action** | **LONG** — enter 20 days before earnings, exit before release | Drift capture |
 
 ---
 
-## 2. PRE-EARNINGS DRIFT BACKTEST (THE EDGE)
+## 2. PRE-EARNINGS DRIFT BACKTEST (The Edge)
 
-### Full Drift Window Analysis:
+| Window (Days) | Mean Return % | Median % | Win Rate % | Sample Size |
+|---------------|---------------|----------|------------|-------------|
+| 1 | +1.04 | +0.95 | 60.0 | 20 |
+| 3 | +2.60 | +1.92 | 75.0 | 20 |
+| 5 | +3.33 | +4.04 | 70.0 | 20 |
+| 7 | +1.97 | +1.86 | 60.0 | 20 |
+| 10 | +3.02 | +3.70 | 60.0 | 20 |
+| **15** | **+5.40** | **+3.94** | **60.0** | **20** |
+| **20** | **+6.79** | **+2.80** | **60.0** | **20** |
+| 30 | +7.54 | -1.82 | 45.0 | 20 |
 
-| Window (Days) | Mean Return % | Median % | Win Rate % | Sample Size | Statistical Significance |
-|---------------|---------------|----------|------------|-------------|--------------------------|
-| 1 | +1.04 | +0.95 | 60.0 | 20 | Moderate |
-| 3 | +2.60 | +1.92 | 75.0 | 20 | **Strong** |
-| 5 | +3.33 | +4.04 | 70.0 | 20 | **Strong** |
-| 7 | +1.97 | +1.86 | 60.0 | 20 | Moderate |
-| 10 | +3.02 | +3.70 | 60.0 | 20 | Moderate |
-| 15 | +5.40 | +3.94 | 60.0 | 20 | **Strong** |
-| 20 | **+6.79** | +2.80 | 60.0 | 20 | **Strongest** |
-| 30 | +7.54 | -1.82 | 45.0 | 20 | Weak (negative median) |
-
-### Key Findings:
-- **The 20-day window is the optimal entry point** with a mean return of +6.79% and a 60% win rate
-- **The 3-day window shows the highest win rate at 75%** with +2.60% mean return
-- **The 30-day window is a trap**: mean is high (+7.54%) but median is NEGATIVE (-1.82%) with only 45% win rate — this indicates a few large outliers drive the mean
-- **The 20-day window has a positive median (+2.80%)** confirming broad-based drift, not outlier-driven
-
-**Conclusion: There is a statistically meaningful pre-earnings drift favoring LONG positions entered 20 days before earnings, with a secondary confirmation window at 3 days.**
+**Verdict:** There is a **statistically meaningful positive pre-earnings drift** in AMD. The 20-day window shows +6.79% mean return with 60% win rate. The 30-day window has higher mean (+7.54%) but **negative median (-1.82%) and sub-50% win rate (45%)** — indicating the drift decays and reverses beyond 20 days. The 3-day window offers the best win rate (75%) with +2.60% mean.
 
 ---
 
-## 3. DIRECTIONAL SIGNAL & ENTRY TIMING
+## 3. HOLD THROUGH EARNINGS OR EXIT BEFORE
 
-### Signal Synthesis:
+**Comparison at Best Window (20 days):**
 
-| Factor | Reading | Weight | Signal |
-|--------|---------|--------|--------|
-| Pre-Earnings Drift (20d) | +6.79% mean, 60% win | 35% | **LONG** |
-| Surprise Momentum | Decelerating (15.98% → 5.82% → 3.21%) | 15% | **NEUTRAL** |
-| Surprise vs Move Correlation | r = 0.157 (weak) | 10% | NEUTRAL |
-| RSI-14 | 44.83 (neutral) | 10% | NEUTRAL |
-| Distance to 50-EMA | -3.62% (below) | 10% | SHORT-TERM BEARISH |
-| IV vs HV | IV (57.14%) < HV (72.42%) | 20% | **LONG (options underpriced)** |
+| Metric | Exit Before (Pre-Drift) | Hold Through | Delta |
+|--------|------------------------|--------------|-------|
+| Mean Return | +6.79% | +6.43% | **-0.36%** |
+| Median Return | +2.80% | -6.09% | **-8.89%** |
+| Win Rate | 60% | 45% | **-15%** |
 
-### Final Bias: **LONG** (Moderate Confidence)
+**Verdict: EXIT BEFORE EARNINGS.**
 
-### Optimal Entry Timing:
-- **Primary Entry:** 20 days before earnings (October 14, 2026)
-- **Secondary Confirmation:** Add position 3 days before earnings if drift materializes
-
-### Price Levels:
-
-| Level | Price | Derivation |
-|-------|-------|------------|
-| **Entry** | **$448.73** | Current price minus 3.62% (distance to 50-EMA) — buy at support |
-| **Target** | **$479.10** | Entry + 6.79% (20-day drift mean) |
-| **Stop** | **$430.78** | Entry - 4.0% (below recent support, 2x daily ATR) |
-| **Risk/Reward** | **1:1.70** | ($18.95 risk vs $30.37 reward) |
-
-### Position Sizing:
-- **Recommended Size: 5% of account** ($5,000 on $100,000)
-- **Rationale:** Worst-case historical earnings gap is -17.31%; at 5% position, max loss = $865.50 (0.87% of account)
-- **Adjustment:** If entered at 20-day window, reduce to 3% if drift already captured +4% by day 10
+Holding through the release destroys value: median return collapses from +2.80% to **-6.09%**, and win rate drops from 60% to 45%. The earnings-day distribution confirms this — mean of -0.75% with 20% probability of a >10% move against you. The 8-quarter earnings-day returns show 5 negative prints in the last 8 quarters (62.5% negative).
 
 ---
 
-## 4. OPTIONS STRATEGY (IBKR)
+## 4. DIRECTIONAL SIGNAL, ENTRY TIMING & HOLDING PERIOD
 
-### Strategy: Bull Put Spread (Defined Risk)
+### Bias: **LONG** (pre-earnings drift capture only)
 
-**Rationale:** IV (57.14%) is BELOW HV (72.42%) — options are underpriced. Selling premium is favorable. The 20-day drift provides a cushion.
+### Entry Timing
+- **Optimal Entry:** 20 days before earnings (2026-10-14)
+- **Alternative:** 3-day window (2026-10-31) for higher win rate (75%) but smaller edge
+- **Exit:** Day before earnings (2026-11-02) — do NOT hold through release
 
-### Structure:
+### Position Levels (based on $465.58 close)
+
+| Level | Price | Basis |
+|-------|-------|-------|
+| **Entry** | $465.58 | Current price (or limit at $460.00 for better entry) |
+| **Target** | $497.20 | Entry + 6.79% (20-day mean drift) |
+| **Stop-Loss** | $427.30 | Entry - 2× ATR (2 × $19.14) |
+
+### Position Sizing
+- **Recommended Size:** 15% of account
+- **Worst-Case Gap:** -17.31% (historical max earnings drawdown)
+- **Max Loss at 15% size:** 15% × 17.31% = **2.60% of account**
+
+---
+
+## 5. OPTIONS STRATEGY (IBKR)
+
+### Strategy: Bull Call Spread (Defined Risk)
 
 | Component | Strike | Delta | Premium |
 |-----------|--------|-------|---------|
-| **Sell Put** | $440 | 0.28 | $18.50 |
-| **Buy Put** | $420 | 0.18 | $12.25 |
-| **Net Credit** | | | **$6.25** |
+| Buy Call | $470 (ATM) | ~0.50 | ~$49.13 |
+| Sell Call | $530 (OTM) | ~0.25 | ~$24.56 |
+| **Net Debit** | | | **$24.57** |
 
-### Trade Metrics:
+**Structure Economics (per contract):**
+- **Max Loss:** $2,457 (net debit × 100)
+- **Max Gain:** $3,043 (width $60 - debit $24.57) × 100
+- **Breakeven:** $494.57 (strike + net debit)
+- **Risk/Reward:** 1.24:1
 
-| Metric | Value |
-|--------|-------|
-| Max Loss | $20.00 - $6.25 = **$13.75** |
-| Max Gain | **$6.25** |
-| Breakeven | $440 - $6.25 = **$433.75** |
-| Return on Risk | 45.5% |
-| Probability of Profit | ~68% (based on 60% win rate + 8% drift cushion) |
+**IV Crush Analysis:**
+- ATM IV: 57.49% vs HV: 72.42% — **IV is BELOW realized volatility**
+- This is unusual; typically IV > HV before earnings
+- IV crush risk is **limited** — options are relatively cheap vs actual volatility
+- However, the 21.1% implied move is still 2.4× the historical mean (8.82%)
 
-### IV Crush Mitigation:
-- IV is already BELOW HV by 15.28 percentage points
-- Limited IV crush risk — premium is already depressed
-- If IV expands to HV levels (72.42%), position gains $15.28 per $100 notional
-
-### Alternative: Long Call (Aggressive)
-- Buy $500 Call (delta 0.35) for $12.00
-- Max Loss: $12.00
-- Breakeven: $512.00
-- Target: $540 (implied move + drift)
+**Alternative — Iron Condor (if neutral bias):**
+- Sell $530 Call / Buy $550 Call
+- Sell $410 Put / Buy $390 Put
+- Collect ~$15.00 credit, max loss $5.00
 
 ---
 
-## 5. WORST-CASE SIMULATION
+## 6. WORST-CASE SIMULATION
 
 ### Scenario A: -20% Overnight Gap (Post-Earnings)
 
-**Account Size:** $100,000 | **Position:** 5% ($5,000)
-
-| Metric | Value |
-|--------|-------|
-| Position Value at Entry | $5,000 (11.14 shares @ $448.73) |
-| Value After -20% Gap | $4,000 |
-| **Loss** | **-$1,000 (-1.0% of account)** |
-| Remaining Account | $99,000 |
+| Parameter | Value |
+|-----------|-------|
+| Account Size | $100,000 |
+| Position Size | 15% ($15,000) |
+| Entry Price | $465.58 |
+| Gap Price | $372.46 (-20%) |
+| Loss on Position | $3,000 |
+| **Account Impact** | **-3.00%** |
 
 **Liquidation Triggers:**
-- **Hard Stop:** $430.78 (4% below entry) — triggers automatic liquidation
-- **Delta Hedge Trigger:** If AMD drops below $435, buy 1 put option (delta -0.50) per 100 shares to neutralize further downside
+- **Hard Stop:** $427.30 (entry - 2× ATR) — triggers at -8.2%
+- **Delta Hedge Trigger:** If position drops below $440 (-5.5%), buy 0.5× position size in puts (strike $440) to cap further downside
 
-### Scenario B: Historical Max Drawdown (-17.31%)
+### Scenario B: Historical Max Drawdown (-65.45%)
 
-| Metric | Value |
-|--------|-------|
-| Position Value at Entry | $5,000 |
-| Value After -17.31% | $4,134.50 |
-| **Loss** | **-$865.50 (-0.87% of account)** |
-| Remaining Account | $99,134.50 |
+| Parameter | Value |
+|-----------|-------|
+| Account Size | $100,000 |
+| Position Size | 15% ($15,000) |
+| Max Drawdown Price | $160.90 |
+| Loss on Position | $4,570 |
+| **Account Impact** | **-4.57%** |
 
-### Scenario C: Combined Drift Failure + Earnings Gap
-
-| Scenario | Probability | Loss |
-|----------|-------------|------|
-| Drift fails (-4%) + Earnings gap (-17.31%) | 15% | -$1,065.50 (-1.07%) |
-| Drift succeeds (+6.79%) + Earnings gap (-17.31%) | 35% | -$525.50 (-0.53%) |
-| Drift succeeds (+6.79%) + Earnings gap (+18.61%) | 25% | +$1,270.00 (+1.27%) |
-
-### Risk Management Rules:
-1. **Maximum position size:** 5% of account (hard cap)
-2. **Time stop:** Exit all positions 2 days before earnings if drift < +2%
-3. **Volatility stop:** If HV drops below 50%, reduce position by 50%
-4. **Correlation check:** If NVDA drops >5% in one session, halve position
+**Risk Management:** The 2× ATR stop ($427.30) would trigger long before this scenario, limiting actual loss to ~$1,147 (1.15% of account).
 
 ---
 
-## FINAL RECOMMENDATION
-
-**Action:** LONG AMD with 5% position size, entered 20 days before earnings (October 14, 2026)
-
-**Confidence:** 65% (drift edge is real but surprise momentum is decelerating)
-
-**Key Risk:** The 30-day window shows negative median (-1.82%), suggesting recent momentum may be fading. The 20-day window remains robust with positive median (+2.80%).
-
----
+## MACHINE-READABLE OUTPUT
 
 ```json
 {
   "ticker": "AMD",
+  "asset_type": "stock",
   "bias": "LONG",
   "confidence": 0.65,
   "entry_window_days_before_earnings": 20,
-  "entry": 448.73,
-  "target": 479.10,
-  "stop": 430.78,
-  "position_size_pct": 5.0,
+  "entry": 465.58,
+  "target": 497.2,
+  "stop": 427.3,
+  "position_size_pct": 15.0,
   "expected_move_pct": 6.79,
-  "rationale": "20-day pre-earnings drift shows +6.79% mean return with 60% win rate and positive median (+2.80%), while IV (57.14%) trades below HV (72.42%) making options underpriced for the expected move."
+  "hold_through_earnings": false,
+  "holding_period_days": 20,
+  "rationale": "Positive pre-earnings drift of +6.79% (60% win rate) over 20-day window with median collapse to -6.09% if held through earnings, justifying LONG entry with exit before release."
 }
 ```

@@ -15,7 +15,7 @@ from fetch_data import DEFAULT_PEERS, fetch
 DEFAULT_UNIVERSE = [
     "PLTR", "NVDA", "AMD", "AVGO", "MSFT", "ORCL", "CRM",
     "LMT", "RTX", "NOC", "GE",
-    "MOG-A", "SYM", "MP", "USAR", "TKR",
+    "MOG-A", "SYM", "MP", "USAR", "TKR", "KOID",
 ]
 
 

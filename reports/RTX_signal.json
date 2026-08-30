@@ -1,0 +1,12 @@
+{
+  "ticker": "RTX",
+  "bias": "LONG",
+  "confidence": 0.72,
+  "entry_window_days_before_earnings": 30,
+  "entry": 211.71,
+  "target": 220.10,
+  "stop": 195.22,
+  "position_size_pct": 15.0,
+  "expected_move_pct": 3.96,
+  "rationale": "Statistically significant 30-day pre-earnings drift of +3.96% with 75% win rate (t-stat 5.94) combined with options implying a 10.41% move vs historical max of 5.74% creates a high-probability long equity / short volatility opportunity."
+}

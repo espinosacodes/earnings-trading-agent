@@ -1,0 +1,12 @@
+{
+  "ticker": "LMT",
+  "bias": "LONG",
+  "confidence": 0.55,
+  "entry_window_days_before_earnings": 20,
+  "entry": 563.85,
+  "target": 573.21,
+  "stop": 546.93,
+  "position_size_pct": 33.3,
+  "expected_move_pct": 1.66,
+  "rationale": "20-day pre-earnings drift shows +1.66% mean return with 55% win rate, while options market overprices earnings move at 10.75% vs 1.50% historical mean, creating dual edge in drift capture and volatility selling."
+}

@@ -48,6 +48,8 @@ def earnings_events(t: yf.Ticker, hist: pd.DataFrame) -> pd.DataFrame:
                 "actual": None if pd.isna(row.get("Reported EPS")) else float(row["Reported EPS"]),
             }
         )
+    if not rows:
+        return pd.DataFrame(columns=["date", "return", "surprise_pct", "estimated", "actual"])
     return pd.DataFrame(rows).sort_values("date").reset_index(drop=True)
 
 
@@ -199,6 +201,10 @@ def fetch(ticker: str, peers: list[str]) -> dict:
     hist = t.history(period="5y", auto_adjust=True)
     info = t.info or {}
 
+    if hist.empty:
+        sys.exit(f"no price data for {ticker}")
+
+    hist = hist.dropna(subset=["Close"])
     if hist.empty:
         sys.exit(f"no price data for {ticker}")
 

@@ -8,17 +8,15 @@ import requests
 from dotenv import load_dotenv
 
 
-def main():
+def generate_report(ticker: str, metrics: dict) -> str:
     load_dotenv()
     api_key = os.getenv("DEEPSEEK_API_KEY")
     base_url = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
     model = os.getenv("DEEPSEEK_MODEL", "deepseek-chat")
-    ticker = (os.getenv("TICKER") or "PLTR").upper()
 
     if not api_key:
-        sys.exit("DEEPSEEK_API_KEY not set in .env")
+        raise RuntimeError("DEEPSEEK_API_KEY not set in .env")
 
-    metrics = json.load(sys.stdin)
     prompt_path = os.path.join(os.path.dirname(__file__), "prompts", "system_prompt.md")
     with open(prompt_path) as f:
         system_prompt = f.read().replace("{TICKER}", ticker)
@@ -37,8 +35,10 @@ def main():
         timeout=300,
     )
     resp.raise_for_status()
-    report = resp.json()["choices"][0]["message"]["content"]
+    return resp.json()["choices"][0]["message"]["content"]
 
+
+def write_outputs(ticker: str, report: str) -> None:
     os.makedirs("reports", exist_ok=True)
     out = os.path.join("reports", f"{ticker}_earnings_report.md")
     with open(out, "w") as f:
@@ -51,6 +51,12 @@ def main():
         print(f"wrote {out} + {ticker}_signal.json")
     else:
         print(f"wrote {out} (no JSON signal block found)")
+
+
+def main():
+    ticker = (os.getenv("TICKER") or "PLTR").upper()
+    metrics = json.load(sys.stdin)
+    write_outputs(ticker, generate_report(ticker, metrics))
 
 
 if __name__ == "__main__":

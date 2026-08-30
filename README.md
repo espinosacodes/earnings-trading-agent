@@ -23,6 +23,15 @@ TICKER=PLTR python analyze.py < metrics.json
 Any ticker works; `TICKER` defaults to `PLTR`. Set `PEERS` (comma-separated)
 to override the default software/AI peer set.
 
+Run the full universe in one go:
+
+```bash
+python run_batch.py                 # default universe
+TICKERS=NVDA,AMD,LMT python run_batch.py
+```
+
+See `PORTFOLIO.md` for the long-term value + growth framework.
+
 ## GitHub Actions
 
 - Weekly schedule (Monday 14:00 UTC) plus manual `workflow_dispatch`.

@@ -1,0 +1,12 @@
+{
+  "ticker": "USAR",
+  "bias": "NEUTRAL",
+  "confidence": 0.15,
+  "entry_window_days_before_earnings": 0,
+  "entry": 0.0,
+  "target": 0.0,
+  "stop": 0.0,
+  "position_size_pct": 0.0,
+  "expected_move_pct": 39.19,
+  "rationale": "No statistically significant pre-earnings drift edge exists (best window 30d has only 50% win rate with n=6), while options imply a 39.19% move versus 8.14% historical mean absolute move, making directional positioning a negative expectancy bet."
+}

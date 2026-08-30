@@ -1,0 +1,12 @@
+{
+  "ticker": "AVGO",
+  "bias": "NEUTRAL",
+  "confidence": 0.65,
+  "entry_window_days_before_earnings": 1,
+  "entry": 365.77,
+  "target": 395.45,
+  "stop": 348.00,
+  "position_size_pct": 2.0,
+  "expected_move_pct": 8.12,
+  "rationale": "Optimal 30-day pre-earnings drift window (+7.27%, 78.9% WR) missed; residual 3-day edge (+0.99%, 60% WR) insufficient vs 8.12% implied move, with negative surprise-move correlation (-0.144) and decelerating momentum favoring flat positioning."
+}

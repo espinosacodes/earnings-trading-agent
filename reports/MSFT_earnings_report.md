@@ -1,0 +1,14 @@
+```json
+{
+  "ticker": "MSFT",
+  "bias": "NEUTRAL",
+  "confidence": 0.55,
+  "entry_window_days_before_earnings": 10,
+  "entry": 513.53,
+  "target": 521.0,
+  "stop": 505.0,
+  "position_size_pct": 2.0,
+  "expected_move_pct": 11.58,
+  "rationale": "Pre-earnings drift is positive (1.46% mean, 65% win rate over 10 days) but earnings-day distribution is wide (6.27% std) with only 5% probability of >10% move, and RSI at 73.53 signals overbought conditions."
+}
+```

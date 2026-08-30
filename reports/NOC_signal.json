@@ -1,0 +1,12 @@
+{
+  "ticker": "NOC",
+  "bias": "LONG",
+  "confidence": 0.65,
+  "entry_window_days_before_earnings": 30,
+  "entry": 536.03,
+  "target": 551.81,
+  "stop": 524.5,
+  "position_size_pct": 15.0,
+  "expected_move_pct": 2.94,
+  "rationale": "30-day pre-earnings drift shows +1.53% mean return with 60% win rate (t-stat 2.16) while valuation trades at 86.4% discount to peer average P/E, supporting a long entry at volume-profile support with exit before the negative 1-10 day drift window."
+}
